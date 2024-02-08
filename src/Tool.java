@@ -1,24 +1,12 @@
 public class Tool extends TeachingMaterial {
-    private String name;
     private String description;
 
-    public Tool(String name, boolean onShoppingList, boolean required, boolean provided, String notes, String name1, String description) {
+    public Tool(String name, boolean onShoppingList, boolean required, boolean provided, String notes, String description) {
         super(name, onShoppingList, required, provided, notes);
-        this.name = name1;
         this.description = description;
     }
 
     public Tool() {
-    }
-
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getDescription() {
@@ -28,4 +16,17 @@ public class Tool extends TeachingMaterial {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Name: ").append(getName()).append("\n");
+        sb.append("Description: ").append(description).append("\n");
+        sb.append("On Shopping List: ").append(isOnShoppingList()).append("\n");
+        sb.append("Required: ").append(isRequired()).append("\n");
+        sb.append("Provided: ").append(isProvided()).append("\n");
+        sb.append("Notes: ").append(getNotes()).append("\n");
+        return sb.toString();
+    }
 }
+

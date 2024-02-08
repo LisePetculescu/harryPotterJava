@@ -1,4 +1,4 @@
-abstract class TeachingMaterial {
+public abstract class TeachingMaterial {
     private String name;
     private boolean onShoppingList;
     private boolean required;
@@ -55,4 +55,16 @@ abstract class TeachingMaterial {
     public void setNotes(String notes) {
         this.notes = notes;
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Name: ").append(name).append("\n");
+        sb.append("On Shopping List: ").append(onShoppingList).append("\n");
+        sb.append("Required: ").append(required).append("\n");
+        sb.append("Provided: ").append(provided).append("\n");
+        sb.append("Notes: ").append(notes).append("\n");
+        return sb.toString();
+    }
+
 }

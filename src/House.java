@@ -36,7 +36,21 @@ public class House {
         this.colours = colours;
     }
 
+    // public String toString() {
+   //     return name;
+  //  }
+
+
+    @Override
     public String toString() {
-        return name;
+        StringBuilder sb = new StringBuilder();
+        sb.append("House Name: ").append(name).append("\n");
+        sb.append("Founder: ").append(founder).append("\n");
+        sb.append("Colours: ");
+        for (String colour : colours) {
+            sb.append(colour).append(", ");
+        }
+        sb.delete(sb.length() - 2, sb.length()); // Remove the last comma and space
+        return sb.toString();
     }
 }

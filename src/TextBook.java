@@ -46,4 +46,20 @@ public class TextBook extends TeachingMaterial{
     public void setPublishedYear(int publishedYear) {
         this.publishedYear = publishedYear;
     }
+
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Name: ").append(getName()).append("\n");
+        sb.append("Title: ").append(title).append("\n");
+        sb.append("Author: ").append(author).append("\n");
+        sb.append("Publisher: ").append(publisher).append("\n");
+        sb.append("Published Year: ").append(publishedYear).append("\n");
+        sb.append("On Shopping List: ").append(isOnShoppingList()).append("\n");
+        sb.append("Required: ").append(isRequired()).append("\n");
+        sb.append("Provided: ").append(isProvided()).append("\n");
+        sb.append("Notes: ").append(getNotes()).append("\n");
+        return sb.toString();
+    }
 }

@@ -1,17 +1,34 @@
-public class Course  {
+public class Course {
     private Subject subject;
     private Teacher teacher;
-    private Student[] student;
+    private Student[] students;
     private TeachingMaterial[] materials;
 
-    public Course(Subject subject, Teacher teacher, Student[] student, TeachingMaterial[] materials) {
+    public Course(Subject subject, Teacher teacher, Student[] students, TeachingMaterial[] materials) {
         this.subject = subject;
         this.teacher = teacher;
-        this.student = student;
+        this.students = students;
         this.materials = materials;
     }
 
     public Course() {
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Subject: ").append(subject.getName()).append("\n");
+        sb.append("Teacher: ").append(teacher.getFullName()).append("\n");
+        sb.append("Students:\n");
+        for (Student student : students) {
+            sb.append("- ").append(student.getFullName()).append("\n");
+        }
+
+        sb.append("Teaching Materials:\n");
+        for (TeachingMaterial material : materials) {
+            sb.append("- ").append(material.getName()).append("\n");
+        }
+        return sb.toString();
     }
 
     public Subject getSubject() {
@@ -30,12 +47,12 @@ public class Course  {
         this.teacher = teacher;
     }
 
-    public Student[] getStudent() {
-        return student;
+    public Student[] getStudents() {
+        return students;
     }
 
-    public void setStudent(Student[] student) {
-        this.student = student;
+    public void setStudents(Student[] students) {
+        this.students = students;
     }
 
     public TeachingMaterial[] getMaterials() {

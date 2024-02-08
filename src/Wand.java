@@ -13,6 +13,9 @@ public class Wand extends TeachingMaterial {
     public Wand() {
     }
 
+
+
+
     public double getLengthInInches() {
         return lengthInInches;
     }
@@ -35,5 +38,19 @@ public class Wand extends TeachingMaterial {
 
     public void setCore(String core) {
         this.core = core;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Name: ").append(getName()).append("\n");
+        sb.append("Length: ").append(lengthInInches).append(" inches\n");
+        sb.append("Wood: ").append(wood).append("\n");
+        sb.append("Core: ").append(core).append("\n");
+        sb.append("On Shopping List: ").append(isOnShoppingList()).append("\n");
+        sb.append("Required: ").append(isRequired()).append("\n");
+        sb.append("Provided: ").append(isProvided()).append("\n");
+        sb.append("Notes: ").append(getNotes()).append("\n");
+        return sb.toString();
     }
 }
