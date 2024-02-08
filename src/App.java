@@ -70,19 +70,14 @@ public class App {
         Ingredient boomslangSkin = new Ingredient("Boomslang Skin", true, true, false, "Rare and difficult to obtain ingredient", "Boomslang Skin", 2.5, "ounces");
 
         // list of teaching materials:
-//        TeachingMaterial[] potionMaterials = {potionTextBook, cauldron, wand, boomslangSkin};
         // TeachingMaterial[] potionMaterials = {potionTextBook, cauldron, wand, boomslangSkin};
+        List<TeachingMaterial> potionMaterials = Arrays.asList(potionTextBook, cauldron, wand, boomslangSkin);
+
 
         // courses:
         // Course potionClass = new Course(potions, horaceSlughorn, hogwartsStudents1991.toArray(new HogwartsStudent[0]), potionMaterials);
-
-        // System.out.println(potionClass);
-
-        // Create a list of teaching materials
-        List<TeachingMaterial> potionMaterials = Arrays.asList(potionTextBook, cauldron, wand, boomslangSkin);
-
-        // Create the Potions course
         Course potionClass = new Course(potions, horaceSlughorn, hogwartsStudents1991.toArray(new HogwartsStudent[0]), potionMaterials.toArray(new TeachingMaterial[0]));
+
 
         // Print information about the Potions course
         printPotionsCourseInfo(potionClass);
