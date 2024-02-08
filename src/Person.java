@@ -22,7 +22,7 @@ public class Person {
   }
 
   public String toString() {
-    return firstName + " " + middleName + " " + lastName;
+    return getFullName();
   }
 
   public void makeHarry() {
@@ -56,7 +56,7 @@ public class Person {
     this.age = age;
   }
 
-  String getFullName() {
+  public String getFullName() {
     if (hasMiddleName()) {
       return getFirstName() + " " + getMiddleName() + " " + getLastName();
     } else {
@@ -64,7 +64,7 @@ public class Person {
     }
   }
 
-  void setFullName(String fullName) {
+  public void setFullName(String fullName) {
     String[] nameParts = fullName.split(" ");
 
     if (nameParts.length > 2) {
@@ -74,15 +74,15 @@ public class Person {
     lastName = nameParts[nameParts.length - 1];
   }
 
-  String getMiddleName() {
+  public String getMiddleName() {
     return middleName;
   }
 
-  void setMiddleName(String middleName) {
+  public void setMiddleName(String middleName) {
     this.middleName = middleName;
   }
 
-  boolean hasMiddleName() {
+  public boolean hasMiddleName() {
     return middleName != null;
   }
 }
