@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Course {
     private Subject subject;
     private Teacher teacher;
@@ -17,19 +19,34 @@ public class Course {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Subject: ").append(subject.getName()).append("\n");
-        sb.append("Teacher: ").append(teacher.getFullName()).append("\n");
+        sb.append("Subject: ").append(subject.toString()).append("\n");
+        System.out.println("\n");
+        sb.append("Teacher: ").append(teacher.toString()).append("\n");
+        System.out.println("\n");
         sb.append("Students:\n");
         for (Student student : students) {
-            sb.append("- ").append(student.getFullName()).append("\n");
+            sb.append("- ").append(student).append("\n").append("\n");
+
         }
+
 
         sb.append("Teaching Materials:\n");
         for (TeachingMaterial material : materials) {
-            sb.append("- ").append(material.getName()).append("\n");
+            sb.append("- ").append(material).append("\n");
+            System.out.println("\n");
         }
         return sb.toString();
     }
+
+//    @Override
+//    public String toString() {
+//        return "Course{" +
+//                "subject=" + subject +
+//                ", teacher=" + teacher +
+//                ", students=" + Arrays.toString(students) +
+//                ", materials=" + Arrays.toString(materials) +
+//                '}';
+//    }
 
     public Subject getSubject() {
         return subject;

@@ -13,6 +13,7 @@ public class HogwartsStudent extends Student implements HogwartsPerson {
         this.teams = teams;
     }
 
+
     public HogwartsStudent() {
     }
 
@@ -41,6 +42,8 @@ public class HogwartsStudent extends Student implements HogwartsPerson {
     public void setTeams(List<String> teams) {
         this.teams = teams;
     }
+
+
 
     @Override
     public String toString() {

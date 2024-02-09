@@ -42,10 +42,11 @@ public class HogwartsTeacher extends Teacher implements HogwartsPerson {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Name: ").append(getFullName()).append("\n");
+        sb.append("\n").append("Name: ").append(getFullName()).append("\n");
         sb.append("Employment Type: ").append(getEmpType()).append("\n");
         sb.append("House: ").append(house.getName()).append("\n");
         sb.append("Head of House: ").append(headOfHouse ? "Yes" : "No").append("\n");
         return sb.toString();
     }
+
 }

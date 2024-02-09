@@ -28,7 +28,7 @@ public class App {
                 LocalDate.of(1981, Month.JULY, 1), LocalDate.of(1998, Month.MAY, 2), slytherin, true);
 
        // System.out.println(slytherin);
-       // System.out.println(snape);
+       System.out.println(severusSnape);
 
         // list of students from 1991
         List<HogwartsStudent> hogwartsStudents1991 = new ArrayList<>();
@@ -78,20 +78,24 @@ public class App {
         // Course potionClass = new Course(potions, horaceSlughorn, hogwartsStudents1991.toArray(new HogwartsStudent[0]), potionMaterials);
         Course potionClass = new Course(potions, horaceSlughorn, hogwartsStudents1991.toArray(new HogwartsStudent[0]), potionMaterials.toArray(new TeachingMaterial[0]));
 
+        System.out.println(potionClass);
 
         // Print information about the Potions course
-        printPotionsCourseInfo(potionClass);
+        // printPotionsCourseInfo(potionClass);
     }
 
     private void printPotionsCourseInfo(Course potionClass) {
         System.out.println("Potions Course Information:");
         System.out.println("==========================");
         System.out.println("Subject: " + potionClass.getSubject().getName());
+        System.out.println("\n");
         System.out.println("Teacher: " + potionClass.getTeacher().getFullName());
+        System.out.println("\n");
         System.out.println("Students:");
         for (Student student : potionClass.getStudents()) {
-            System.out.println("- " + student.getFullName());
+            System.out.println("- " + student.getFullName() + ", Started year: " + student.getEnrollmentYear() + ", is this student graduated: " + student.isGraduated());
         }
+        System.out.println("\n");
         System.out.println("Teaching Materials:");
         for (TeachingMaterial material : potionClass.getMaterials()) {
             System.out.println("- " + material.getName());
