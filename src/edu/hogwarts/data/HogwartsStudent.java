@@ -1,3 +1,6 @@
+package edu.hogwarts.data;
+
+import edu.generic.Student;
 import java.util.List;
 
 public class HogwartsStudent extends Student implements HogwartsPerson {
@@ -52,7 +55,7 @@ public class HogwartsStudent extends Student implements HogwartsPerson {
         sb.append("Enrollment Year: ").append(getEnrollmentYear()).append("\n");
         sb.append("Graduation Year: ").append(getGraduationYear()).append("\n");
         sb.append("Graduated: ").append(isGraduated()).append("\n");
-        sb.append("House: ").append(house.getName()).append("\n");
+        sb.append("edu.hogwarts.data.House: ").append(house.getName()).append("\n");
         sb.append("Prefect: ").append(prefect ? "Yes" : "No").append("\n");
         sb.append("Teams: ");
         if (teams != null) {

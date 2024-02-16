@@ -1,3 +1,5 @@
+package edu.hogwarts.data;
+
 public class House {
     private String name;
     private String founder;
@@ -44,7 +46,7 @@ public class House {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("House Name: ").append(name).append("\n");
+        sb.append("edu.hogwarts.data.House Name: ").append(name).append("\n");
         sb.append("Founder: ").append(founder).append("\n");
         sb.append("Colours: ");
         for (String colour : colours) {

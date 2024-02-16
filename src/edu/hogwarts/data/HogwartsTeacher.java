@@ -1,3 +1,7 @@
+package edu.hogwarts.data;
+
+import edu.generic.Teacher;
+
 import java.time.LocalDate;
 
 public class HogwartsTeacher extends Teacher implements HogwartsPerson {
@@ -44,8 +48,8 @@ public class HogwartsTeacher extends Teacher implements HogwartsPerson {
         StringBuilder sb = new StringBuilder();
         sb.append("\n").append("Name: ").append(getFullName()).append("\n");
         sb.append("Employment Type: ").append(getEmpType()).append("\n");
-        sb.append("House: ").append(house.getName()).append("\n");
-        sb.append("Head of House: ").append(headOfHouse ? "Yes" : "No").append("\n");
+        sb.append("edu.hogwarts.data.House: ").append(house.getName()).append("\n");
+        sb.append("Head of edu.hogwarts.data.House: ").append(headOfHouse ? "Yes" : "No").append("\n");
         return sb.toString();
     }
 

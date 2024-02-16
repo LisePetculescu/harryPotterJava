@@ -1,3 +1,5 @@
+package edu.hogwarts.data;
+
 public abstract class TeachingMaterial {
     private String name;
     private boolean onShoppingList;

@@ -1,3 +1,7 @@
+package edu.generic;
+
+import edu.generic.Person;
+
 public class Student extends Person {
 
   private int enrollmentYear;

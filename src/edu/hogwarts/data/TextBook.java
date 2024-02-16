@@ -1,4 +1,6 @@
-public class TextBook extends TeachingMaterial{
+package edu.hogwarts.data;
+
+public class TextBook extends TeachingMaterial {
     private String title;
     private String author;
     private String publisher;

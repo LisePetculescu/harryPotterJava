@@ -1,3 +1,5 @@
+package edu.hogwarts.data;
+
 public class Tool extends TeachingMaterial {
     private String description;
 

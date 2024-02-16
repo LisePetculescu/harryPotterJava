@@ -1,4 +1,13 @@
-import java.util.Arrays;
+package edu.hogwarts.data;
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
+import edu.generic.Student;
+import edu.generic.Teacher;
+import edu.hogwarts.data.Subject;
+import edu.hogwarts.data.TeachingMaterial;
 
 public class Course {
     private Subject subject;
@@ -16,40 +25,37 @@ public class Course {
     public Course() {
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Subject: ").append(subject.toString()).append("\n");
+        sb.append("Subject: ").append(this.subject.toString()).append("\n");
         System.out.println("\n");
-        sb.append("Teacher: ").append(teacher.toString()).append("\n");
+        sb.append("Teacher: ").append(this.teacher.toString()).append("\n");
         System.out.println("\n");
         sb.append("Students:\n");
-        for (Student student : students) {
-            sb.append("- ").append(student).append("\n").append("\n");
+        Student[] var2 = this.students;
+        int var3 = var2.length;
 
+        int var4;
+        for(var4 = 0; var4 < var3; ++var4) {
+            Student student = var2[var4];
+            sb.append("- ").append(student).append("\n").append("\n");
         }
 
-
         sb.append("Teaching Materials:\n");
-        for (TeachingMaterial material : materials) {
+        TeachingMaterial[] var6 = this.materials;
+        var3 = var6.length;
+
+        for(var4 = 0; var4 < var3; ++var4) {
+            TeachingMaterial material = var6[var4];
             sb.append("- ").append(material).append("\n");
             System.out.println("\n");
         }
+
         return sb.toString();
     }
 
-//    @Override
-//    public String toString() {
-//        return "Course{" +
-//                "subject=" + subject +
-//                ", teacher=" + teacher +
-//                ", students=" + Arrays.toString(students) +
-//                ", materials=" + Arrays.toString(materials) +
-//                '}';
-//    }
-
     public Subject getSubject() {
-        return subject;
+        return this.subject;
     }
 
     public void setSubject(Subject subject) {
@@ -57,7 +63,7 @@ public class Course {
     }
 
     public Teacher getTeacher() {
-        return teacher;
+        return this.teacher;
     }
 
     public void setTeacher(Teacher teacher) {
@@ -65,7 +71,7 @@ public class Course {
     }
 
     public Student[] getStudents() {
-        return students;
+        return this.students;
     }
 
     public void setStudents(Student[] students) {
@@ -73,7 +79,7 @@ public class Course {
     }
 
     public TeachingMaterial[] getMaterials() {
-        return materials;
+        return this.materials;
     }
 
     public void setMaterials(TeachingMaterial[] materials) {

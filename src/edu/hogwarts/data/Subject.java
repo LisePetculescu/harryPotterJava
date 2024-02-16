@@ -1,3 +1,5 @@
+package edu.hogwarts.data;
+
 public class Subject {
     private String name;
     private int schoolYear;
